@@ -3,7 +3,7 @@
   .site {
     display: grid;
     grid-template-columns: 75px 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 75px;
-    grid-template-rows: 50px 90px 70px 50px 300px 100px 150px 120px 150px 50px 100px 50px;
+    grid-template-rows: 50px 90px 70px 50px 300px 100px 150px 120px 150px 50px 150px 50px;
     grid-template-areas:
     'nav nav nav nav nav nav nav nav nav nav nav nav'
     'hd hd hd hd hd hd hd hd hd hd hd'
@@ -219,24 +219,76 @@
 
 
   .cards{
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-top: 35px;
+  }
+
+
+  .banner{
+    background-color: #2498f4;
+    margin-top: 10px;
+    position: relative;
+    height: 40px;
+  }
+
+  .banner img{
+    padding: 200px;
+  }
+
+  .banner h5{
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .banner h6{
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  .graph1{
+    margin-top: 20px;
+  }
+
+  .graph2{
+    margin-top: -50px;
   }
 
   .rectangle-contacts{
-    height: 175px;
-    width: 150px;
+    height: 160px;
+    width: 190px;
     margin: 10px;
-    background-color: #000000;
+    border-style: solid;
+    border-color: red;
     margin-left: 50px;
+  }
+
+  .rectangle-contacts:hover{
+    color: gray;
+  }
+
+  .icon-man-green{
+    margin-left: 50px;
+    margin-top: -40px;
+    position: absolute;
+  }
+
+  .icon-man-orange{
+    margin-left: 50px;
+    margin-top: -40px;
+    position: absolute;
   }
 
 
   .rectangle-customers{
-    height: 175px;
-    width: 150px;
+    height: 160px;
+    width: 190px;
     margin: 10px;
     background-color: #000000;
     margin-left: 50px;
+  }
+
+  .rectangle-customers:hover{
+    color: gray;
   }
 
   .did-you-know{
@@ -256,28 +308,68 @@
     border-style: solid;
     background-color: #2498f4;
     margin-bottom: 20px;
+
   }
 
   .ads .rectangle1{
-    height: 100px;
-    width: 150px;
+    height: 130px;
+    width: 250px;
     margin: 10px;
-    background-image: url("images/ad1.png");
+    background-image: url("../images/ad1.png");
+    background-repeat:no-repeat;
+    background-size: contain;
     background-color: #ffffff;
+
+  }
+
+
+  .ads .rectangle1 h5{
+    margin-left: 130px;
+    margin-top: 40px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 16px;
+  }
+
+  .ads .rectangle1 h6{
+    margin-left: 130px;
+    margin-top: -25px;
   }
 
   .ads .rectangle2{
-    height: 100px;
-    width: 150px;
+    height: 130px;
+    width: 230px;
     margin: 10px;
     background-color: #ffffff;
   }
 
+  #ad2{
+    background-image: url("../images/ad2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2498f4;
+  }
+
   .ads .rectangle3{
-    height: 100px;
-    width: 150px;
+    height: 130px;
+    width: 230px;
     margin: 10px;
+    background-image: url("../images/ad3.png"); height: 130px; width: 230px;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-color: #ffffff;
+  }
+
+  .ads .rectangle3 h5{
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .ads .rectangle3 h6{
+    margin-top: -25px;
+    margin-left: 10px;
+    font-size: 14px;
   }
 
   .ads .flex-container{
