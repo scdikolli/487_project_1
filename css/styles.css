@@ -2,26 +2,29 @@
 
   .site {
     display: grid;
-    grid-template-columns: 75px 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 75px;
-    grid-template-rows: 50px 90px 70px 50px 300px 100px 150px 120px 150px 50px 150px 50px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 90px 70px 50px 300px 100px 200px 200px 200px 50px;
     grid-template-areas:
+    'hd hd hd hd hd hd hd hd hd hd hd hd'
     'nav nav nav nav nav nav nav nav nav nav nav nav'
-    'hd hd hd hd hd hd hd hd hd hd hd'
-    'an an an'
-    'tsk analyt analyt'
-    'rec con-cus con-cus'
-    'rec did did'
-    'ads ads ads'
+    '. dash dash dash dash dash dash dash dash dash dash .'
+    '. an an an an an an an an an an .'
+    '. task task task task analyt analyt analyt analyt analyt analyt .'
+    '. rec rec rec rec analyt analyt analyt analyt analyt analyt .'
+    '. rec rec rec rec con con con con con con .'
+    '. rec rec rec rec did did did did did did .'
+    '. ads ads ads ads ads ads ads ads ads ads .'
     'ft ft ft ft ft ft ft ft ft ft ft ft';
     font-family: "Proxima Nova";
   }
 
   .header{
-    grid-column: 1/13;
-    grid-row: 1/2;
+    grid-area: hd;
     border-style: solid;
     background-color: #2191e9;
     justify-content: flex-start;
+    color:#ffffff;
+    font-weight: bold;
   }
 
   .header img{
@@ -29,26 +32,19 @@
     padding-left: 20px;
   }
 
-  .header p{
-    color:#ffffff;
-    font-weight: bold;
-  }
-
   #social-stream{
   flex-basis:75%;
   }
 
   .navbar{
-    grid-column: 1/13;
-    grid-row: 2/3;
+    grid-area: nav;
     border-style: solid;
     background-color: #124570;
     justify-content: center;
   }
 
   .dashboard{
-    grid-column: 2/12;
-    grid-row: 3/4;
+    grid-area:dash;
     border-style: solid;
     background-color: #33cc66;
   }
@@ -64,7 +60,7 @@
     margin-top: -40px;
   }
 
-  .dashboard input[type=text] {
+  .dashboard input[type="text"] {
     padding: 6px;
     margin-bottom: 8px;
     font-size: 17px;
@@ -90,27 +86,28 @@
   display: flex;
   align-items: center;
   border-style: dashed;
+  flex-wrap: wrap;
   }
 
   .flex-column{
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .announcements{
-    grid-column: 2/12;
-    grid-row: 4/5;
+    grid-area:an;
     border-style: solid;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .announcements h5{
     color:#fe7f13;
-    margin: 15px;
   }
 
   .announcements p{
-    margin: 15px;
   }
 
 
@@ -138,8 +135,7 @@
   }
 
   .tasks{
-    grid-column: 2/5;
-    grid-row: 5/6;
+    grid-area: task;
   }
 
   .number-circle{
@@ -165,8 +161,7 @@
 
 
   .analytics{
-    grid-column: 5/12;
-    grid-row: 5/7;
+    grid-area:analyt;
     border-style: solid;
   }
 
@@ -183,8 +178,7 @@
   }
 
   .recommendations{
-    grid-column: 2/5;
-    grid-row: 6/10;
+    grid-area:rec;
     border-style: solid;
   }
 
@@ -200,11 +194,6 @@
     margin-right: 20px;
   }
 
-  .recommendations .flex-container{
-    display: flex;
-    flex-direction: column;
-  }
-
   .recommendations .row{
     display: flex;
     flex-direction: row;
@@ -212,15 +201,13 @@
   }
 
   .contacts-customers {
-    grid-column:5/12;
-    grid-row: 7/9;
+    grid-area: con;
     border-style: solid;
   }
 
 
   .cards{
-    margin-left: 30px;
-    margin-top: 35px;
+    justify-content: space-around;
   }
 
 
@@ -245,70 +232,45 @@
     margin-top: -20px;
   }
 
-  .graph1{
+  .graph{
     margin-top: 20px;
-  }
-
-  .graph2{
-    margin-top: -50px;
   }
 
   .rectangle-contacts{
     height: 160px;
     width: 190px;
-    margin: 10px;
     border-style: solid;
     border-color: red;
-    margin-left: 50px;
+    position: relative;
   }
 
   .rectangle-contacts:hover{
     color: gray;
   }
 
-  .icon-man-green{
+  .icon-man-green, .icon-man-orange{
     margin-left: 50px;
     margin-top: -40px;
     position: absolute;
-  }
-
-  .icon-man-orange{
-    margin-left: 50px;
-    margin-top: -40px;
-    position: absolute;
-  }
-
-
-  .rectangle-customers{
-    height: 160px;
-    width: 190px;
-    margin: 10px;
-    background-color: #000000;
-    margin-left: 50px;
-  }
-
-  .rectangle-customers:hover{
-    color: gray;
   }
 
   .did-you-know{
-    grid-column: 5/12;
-    grid-row: 9/10;
+    grid-area: did;
     border-style: solid;
-    background-color: #2498f4;
+
   }
 
-  .did-you-know .flex-container{
-    display: flex;
+  .content{
+    background-color: #2498f4;
+    margin: 20px;
   }
+
 
   .ads{
-    grid-column: 2/12;
-    grid-row: 10/12;
+    grid-area: ads;
     border-style: solid;
     background-color: #2498f4;
-    margin-bottom: 20px;
-
+    justify-content: center;
   }
 
   .ads .rectangle1{
@@ -319,7 +281,7 @@
     background-repeat:no-repeat;
     background-size: contain;
     background-color: #ffffff;
-
+    position: relative;
   }
 
 
@@ -336,28 +298,35 @@
     margin-top: -25px;
   }
 
-  .ads .rectangle2{
-    height: 130px;
-    width: 230px;
-    margin: 10px;
+
+  .rectangle2{
     background-color: #ffffff;
+    position: relative;
+    height: 130px;
+    width: 250px;
   }
 
-  #ad2{
-    background-image: url("../images/ad2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #2498f4;
+  .rectangle2 img{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 220px;
+    left: 5%;
+  }
+
+  .rectangle2 p{
+    z-index: 55;
   }
 
   .ads .rectangle3{
     height: 130px;
-    width: 230px;
+    width: 250px;
     margin: 10px;
     background-image: url("../images/ad3.png"); height: 130px; width: 230px;
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #ffffff;
+    position: relative;
   }
 
   .ads .rectangle3 h5{
@@ -372,17 +341,19 @@
     font-size: 14px;
   }
 
-  .ads .flex-container{
-    display: flex;
-    justify-content: center;
-  }
 
   .footer{
-    grid-column: 1/13;
-    grid-row: 12/12;
+    grid-area: ft;
     background-color: #f8f8f8;
     box-shadow: 0px -5px 100px -10px;
+    flex-direction: row;
+    justify-content: space-between;
   }
+
+  #ariel{
+
+  }
+
 
   .images-navbar{
     text-align: center;
@@ -401,68 +372,25 @@
 }
 
 
+
 @media screen and (max-width:768px) {
-
-
   .site{
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 100px 70px 50px 150px 150px 150px 100px 100px 70px 100px 10px;
+    grid-template-rows: repeat(11, auto);
     grid-template-areas:
-    'header'
-    'navbar'
-    'dashboard'
-    'announcements'
-    'tasks'
-    'analytics'
-    'recommendations'
-    'contacts-customers'
-    'did-you-know'
+    'hd'
+    'nav'
+    'dash'
+    'an'
+    'task'
+    'analyt'
+    'rec'
+    'con'
+    'did'
     'ads'
-    'footer'
+    'ft';
   }
 
-  .header{
-    grid-area: header;
-  }
 
-  .navbar{
-    grid-area: navbar;
-  }
-
-  .dashboard{
-    grid-area:dashboard;
-  }
-
-  .announcements{
-    grid-area: announcements;
-  }
-
-  .tasks{
-    grid-area:tasks;
-  }
-
-  .analytics{
-    grid-area: analytics;
-  }
-
-  .recommendations{
-    grid-area:recommendations;
-  }
-
-  .contacts-customers{
-    grid-area:contacts-customers;
-  }
-
-  .did-you-know{
-    grid-area: did-you-know;
-  }
-
-  .ads{
-    grid-area: ads;
-  }
-
-  .footer{
-    grid-area: footer;
-  }
 
 }
