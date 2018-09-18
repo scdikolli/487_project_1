@@ -53,6 +53,8 @@
     margin:0px;
   }
 
+
+
   /*Header*/
   .header{
     grid-area: hd;
@@ -80,12 +82,12 @@
     justify-content: center;
   }
 
-  .images-navbar img{
-    padding-top: 10px;
-  }
-
   #stripes{
     background-image: repeating-linear-gradient(145deg, #134670, #194a74 2px, #174873 2px, #0e3f6f 4px);
+  }
+
+  .images-navbar img{
+    padding-top: 10px;
   }
 
   /*Dashboard*/
@@ -102,6 +104,7 @@
     font-weight: normal;
   }
 
+  /*Dashboard-Search*/
   .dashboard .search-container {
     float: right;
     margin-left: 45%;
@@ -211,6 +214,14 @@
     border-width: thin;
   }
 
+  .analytics h4{
+    padding-left: 15px;
+    color: #999999;
+    font-weight: normal;
+    font-size: 10px;
+  }
+
+  /*Analytics-Dropdown Menu*/
   .dropbtn {
     background-color: #ffffff;
     color: gray;
@@ -259,13 +270,6 @@
   #graph2{
     height: 200px;
     margin-bottom: 50px;
-  }
-
-  .analytics h4{
-    padding-left: 15px;
-    color: #999999;
-    font-weight: normal;
-    font-size: 10px;
   }
 
   /*Checkmark Boxes*/
@@ -319,6 +323,7 @@
       content: "";
   }
 
+  /*Label Styles*/
   .check1{
     color:#ffffff;
     background-color: #114570;
@@ -371,6 +376,10 @@
     color: black;
   }
 
+  #tip{
+    padding-left: 10px;
+  }
+
   /*Contacts-Customers*/
   .contacts-customers {
     grid-area: con;
@@ -388,16 +397,17 @@
     position: relative;
   }
 
-  .rectangle-contacts:hover{
-    color: #ffffff;
-  }
-
   .cards{
     justify-content: space-around;
     padding: 20px;
     padding-top: 50px;
   }
 
+  .rectangle-contacts:hover{
+    color: #ffffff;
+  }
+
+  /*Banner Styles*/
   .banner{
     background-color: #2498f4;
     margin-top: 10px;
@@ -491,6 +501,7 @@
     padding-bottom: 10px;
   }
 
+  /*Ad 1*/
   .ads .rectangle1{
     height: 130px;
     width: 250px;
@@ -519,6 +530,7 @@
     font-weight: normal;
   }
 
+  /*Ad 2*/
   .rectangle2{
     background-color: #ffffff;
     position: relative;
@@ -556,6 +568,7 @@
     color: #ffffff;
   }
 
+  /*Ad 3*/
   .ads .rectangle3{
     height: 130px;
     width: 250px;
@@ -689,6 +702,12 @@
       margin-left: 10%;
     }
 
+    #graph2{
+      margin-left: 30%;
+      margin-top: -10%;
+      margin-bottom: 5%;
+    }
+
     /*Contacts-Customers*/
     .rectangle-contacts{
       margin: 30px;
@@ -736,6 +755,7 @@
       flex-basis: 90%;
       padding-left: 10px;
       padding-right: 10px;
+      margin-top: -10%;
     }
 
     .logout{
