@@ -19,119 +19,157 @@
         <p id="social-stream">
           Social Stream
         </p>
-        <p id="mini">
-          MINI of Raleigh
-        </p>
-        <img id="help-icon"src="images/icon_help.png"/>
-        <img id="setting-icon"src="images/icon_settings.png"/>
+
+        <div class="flex">
+          <p id="mini">
+            MINI of Raleigh
+          </p>
+          <img src="images/bar-header.png" alt="Bar Divider"/>
+          <img id="help-icon"src="images/icon_help.png" alt="Help"/>
+          <img src="images/bar-header.png" alt="Bar Divider"/>
+          <img id="setting-icon"src="images/icon_settings.png" alt="Settings"/>
+        </div>
+
 
     </div>
 
-      <div class="navbar flex pattern" id="stripes">
-        <div class="images-navbar">
-          <div class="customers-blue"></div>
-          <div class="customers-green"></div>
-          <div class="dashboard-blue"></div>
-          <div class="dashboard-green"></div>
-          <div class="messages-blue"></div>
-          <div class="messages-green"></div>
-          <div class="promotions-blue"></div>
-          <div class="promotions-green"></div>
-          <div class="pagecreator-blue"></div>
-          <div class="pagecreator-green"></div>
-          <div class="analytics-blue"></div>
-          <div class="analytics-green"></div>
+      <div class="navbar flex pattern"  id="stripes">
+
+        <div class="images-navbar flex">
+          <div class="flex-column">
+            <div class="dashboard-blue"></div>
+            <img src="images/icon-shadow.png" alt="Shadow"/>
+            <img src="images/marker.png"/>
+            <div class="dashboard-green"></div>
+          </div>
+          <div class="flex-column">
+            <div class="customers-blue"></div>
+            <img src="images/icon-shadow.png" alt="Shadow"/>
+            <div class="customers-green"></div>
+          </div>
+          <div class="flex-column">
+            <div class="messages-blue"></div>
+            <img src="images/icon-shadow.png" alt="Shadow"/>
+            <div class="messages-green"></div>
+          </div>
+          <div class="flex-column">
+            <div class="promotions-blue"></div>
+            <img src="images/icon-shadow.png" alt="Shadow"/>
+            <div class="promotions-green"></div>
+          </div>
+          <div class="flex-column">
+            <div class="pagecreator-blue"></div>
+            <img src="images/icon-shadow.png" alt="Shadow"/>
+            <div class="pagecreator-green"></div>
+          </div>
+          <div class="flex-column">
+            <div class="analytics-blue"></div>
+            <img src="images/icon-shadow.png" alt="Shadow"/>
+            <div class="analytics-green"></div>
+          </div>
         </div>
+
       </div>
 
       <div class="dashboard">
-        <h1>Dashboard</h1>
-        <div class="search-container">
-          <form action=" /action_page.php">
-            <input type="text" placeholder="Search" name="search"/>
-            <button type="submit"> <i class="fa fa-search"></i></button>
-          </form>
+
+        <div class="flex">
+          <h1>Dashboard</h1>
+          <div class="search-container">
+            <form action=" /action_page.php">
+              <input type="text" placeholder="" name="search"/>
+              <button type="submit"> <i class="fa fa-search"></i></button>
+            </form>
+          </div>
         </div>
+
+
       </div>
 
       <div class="announcements flex">
 
-          <h5>Announcements</h5>
-          <img src="images/bar2.png"/>
+          <h5>ANNOUNCEMENTS</h5>
+          <img src="images/bar2.png" alt="Bar"/>
           <p>
             Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus
           </p>
-          <img src="images/bar2.png"/>
+          <img src="images/bar2.png" alt="Bar"/>
           <div class="arrows">
-              <img src="images/arrow-left.png"/>
-              <img src="images/arrow-right.png"/>
+              <img src="images/arrow-left.png" alt="Left Arrow"/>
+              <img src="images/arrow-right.png" alt="Right Arrow"/>
           </div>
 
       </div>
 
-<div class="tasks">
-  <h2>Tasks</h2>
+      <div class="tasks">
 
-      <div class="flex" id="tasks">
-        <div class="number-circle">1</div>
-          <p>
-            Welcome Contacts
-          </p>
-          <div id="box">
-            <img src="images/icon_man.png"/>
-            <p id="number">
-              32
-            </p>
+          <div class="flex">
+            <h2>Tasks</h2>
+            <img src="images/icon-settings.png" alt="Settings" id="settings"/>
           </div>
-        </div>
 
-        <div class="flex" id="tasks">
-          <div class="number-circle">2</div>
-          <p>
-            Provide Responses
-          </p>
-          <div id="box">
-            <img src="images/icon_man.png"/>
-            <p id="number">
-              36
-            </p>
-          </div>
-        </div>
+          <div class="flex" id="tasks">
+            <div class="number-circle">1</div>
+              <p>
+                Welcome Contacts
+              </p>
+              <div id="box">
+                <div class="icon-man-blue"></div>
+                <p>
+                  32
+                </p>
+              </div>
+            </div>
 
-        <div class="flex" id="tasks">
-          <div class="number-circle">3</div>
-          <p>
-            Review Activity
-          </p>
-          <div id="box">
-            <img src="images/icon_man.png"/>
-            <p id="number">
-              36
-            </p>
-          </div>
-        </div>
+            <div class="flex" id="tasks">
+              <div class="number-circle">2</div>
+              <p>
+                Provide Responses
+              </p>
+              <div id="box">
+                <div class="icon-man-blue"></div>
+                <p id="number">
+                  36
+                </p>
+              </div>
+            </div>
 
-        <div class="flex" id="tasks">
-          <div class="number-circle">4</div>
-          <p>
-            Reach Out
-          </p>
-          <div id="box">
-            <img src="images/icon_man.png"/>
-            <p id="number">
-              3
-            </p>
-          </div>
-        </div>
-</div>
+            <div class="flex" id="tasks">
+              <div class="number-circle">3</div>
+              <p>
+                Review Activity
+              </p>
+              <div id="box">
+                <div class="icon-man-blue"></div>
+                <p id="number">
+                  36
+                </p>
+              </div>
+            </div>
+
+            <div class="flex" id="tasks">
+              <div class="number-circle">4</div>
+              <p>
+                Reach Out
+              </p>
+              <div id="box">
+                <div class="icon-man-blue"></div>
+                <p id="number">
+                  3
+                </p>
+              </div>
+            </div>
+
+      </div>
 
       <div class="analytics">
+
         <h2>Analytics</h2>
 
         <div class="flex">
-          <h4>Activity</h4>
+          <h4>ACTIVITY</h4>
           <div class="dropdown">
-            <button class="dropbtn">06/28/11 - 07/21/11 <img src="images/dropdown-arrow.png"/></button>
+            <button class="dropbtn">06/28/11 - 07/21/11 <img src="images/dropdown-arrow.png" alt="Dropdown Menu Arrow"/></button>
             <div class="dropdown-content">
               <a href="#">07/21/11 - 08/14/11</a>
               <a href="#">08/14/11 - 09/07/11</a>
@@ -141,12 +179,12 @@
         </div>
 
         <div class="flex">
-          <img id="graph"src="images/graph.png"/>
-          <img id="graph2"src="images/graph2.png"/>
+          <img src="images/graph.png" id="graph" alt="Activity Graph"/>
+          <img src="images/graph2.png" id="graph2" alt="Channels Graph"/>
         </div>
 
         <div class="flex">
-          <div class="checkbox">
+          <div class="checkbox flex-row">
               <input type="checkbox" id="checkbox_1">
               <label for="checkbox_1"><div class="check1">
                 Facebook
@@ -164,45 +202,43 @@
                 Google+
               </div></label>
           </div>
-
-
-
         </div>
 
       </div>
 
       <div class="recommendations">
+
           <h2>Recommendations</h2>
+
           <div class="flex" id="rec">
-            <img src="images/icon_article.png"/>
-            <p id="type">
-              Article
-            </p>
+            <img src="images/icon_article.png" alt="Article"/>
             <p>
-             7 Steps to getting more Fans
+             Article<br/>7 Steps to getting more Fans
             </p>
           </div>
           <div class="flex" id="rec">
-            <img src="images/icon_article.png"/>
+            <img src="images/icon_article.png" alt="Article"/>
             <p>
-              Increase traction with more interactions
+              Article<br/>Increase traction with more interactions
            </p>
           </div>
           <div class="flex" id="rec">
-            <img src="images/icon_checklist.png"/>
+            <img src="images/icon_checklist.png" alt="Checklist"/>
             <p>
-              Creating a Promotion
+              Checklist<br/>Creating a Promotion
             </p>
-            </div>
+          </div>
           <div class="flex" id="rec">
-            <img src="images/icon_tip.png"/>
+            <img src="images/icon_tip.png" alt="Tip"/>
             <p>
-              Share More
+              Tip<br/>Share More
             </p>
-        </div>
+          </div>
+
       </div>
 
       <div class="contacts-customers">
+
         <div class="cards flex">
           <div class="rectangle-contacts">
             <div class="icon-man-green"></div>
@@ -211,7 +247,7 @@
                 <h6>4 INFLUENCERS</h6>
               </div>
               <div class="graph">
-                <img src="images/graph-green.png" />
+                <img src="images/graph-green.png" alt="Contacts Graph"/>
               </div>
           </div>
 
@@ -222,25 +258,29 @@
               <h6>0 INFLUENCERS</h6>
             </div>
             <div class="graph">
-              <img src="images/graph-orange.png" />
+              <img src="images/graph-orange.png" alt="Customers Graph"/>
             </div>
           </div>
-
         </div>
+
       </div>
 
       <div class="did-you-know flex">
-          <div class="content">
-            <p>
-            DID YOU KNOW?
+
+          <div class="content flex-row">
+            <img src="images/halfcircle1.png" alt="Circle Decoration" id="halfcircle1"/>
+            <img src="images/arrow-left-did.png" alt="Left Arrow" id="arrow-left"/>
+            <p id="content-did">
+            DID YOU KNOW?<br />  Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.
             </p>
-            <p>
-              Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.
-            </p>
+            <img src="images/halfcircle2.png" alt="Circle Decoration" id="halfcircle2"/>
+            <img src="images/arrow-right-did.png" alt="Right Arrow" id="arrow-right"/>
           </div>
+
       </div>
 
       <div class="ads flex">
+
           <div class="rectangle1">
             <h5>
               Watch what you say.
@@ -251,69 +291,63 @@
           </div>
 
           <div class="rectangle2">
-            <img src="images/ad2.png" />
-              <p>
-                See what others are doing with us.
-              </p>
+            <img src="images/ad2.png" alt="Others Advertisement"/>
+              <div id="ad2">
+                <h5>
+                  See what others are doing with us.
+                </h5>
+              </div>
           </div>
 
           <div class="rectangle3">
             <h5>Version 2.0</h5>
             <h6>is coming</h6>
           </div>
+
       </div>
 
       <div class="footer flex gradient-footer">
 
-        <div class='tutorials flex'>
+        <div class="tutorials flex-row">
           <p>
             Tutorials
           </p>
-          <img src="images/bar.png"/>
+          <img id="bar" src="images/bar.png" alt="Bar Divider"/>
           <p>
             Support
           </p>
-          <img src="images/bar.png"/>
+          <img id="bar" src="images/bar.png" alt="Bar Divider"/>
           <p>
             Blog
           </p>
         </div>
-        <img src="images/bar2.png"/>
-
+        <div class="ariel flex">
+          <img id=bar2 src="images/bar2.png" alt="Bar Divider"/>
           <p>
             <span class="ariel-winter">Ariel Winter</span> likes your <span class="win">Win A Cooper Sweepstakes</span> promotion
           </p>
-          <img src="images/arrow-footer.png"/>
-          <img src="images/bar2.png"/>
-          <img src="images/logout-footer.png"/>
-          <p id="logout">
-            Logout
-          </p>
-          <img src="images/bar2.png"/>
-          <div class="social-icons">
-            <div class="facebook-icon"></div>
-            <div class="foursquare-icon"></div>
-            <div class="twitter-icon"></div>
-            <div class="youtube-icon"></div>
+        </div>
+        <div class="logout flex">
+
+            <img src="images/bar2.png" alt="Bar Divider"/>
+            <img src="images/logout-footer.png" alt="Logout Image"/>
+            <p id="logout">
+              Logout
+            </p>
+            <img src="images/bar2.png" alt="Bar Divider"/>
+            <div class="social-icons">
+              <div class="facebook-icon"></div>
+              <div class="foursquare-icon"></div>
+              <div class="twitter-icon"></div>
+              <div class="youtube-icon"></div>
           </div>
-          <img id=bar2 src="images/bar2.png"/>
+            <img id=bar2 src="images/bar2.png" alt="Bar Divider"/>
+          </div>
 
       </div>
 
 
-
-
-
-
-
   </body>
-
-
-
-
-
-
-
 
 
 </html>

@@ -3,7 +3,7 @@
   .site {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto 100px; auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto 100px auto auto auto auto auto auto auto auto;
     grid-template-areas:
     'hd hd hd hd hd hd hd hd hd hd hd hd'
     'nav nav nav nav nav nav nav nav nav nav nav nav'
@@ -18,13 +18,50 @@
     font-family: "Proxima Nova";
   }
 
+  /*Global Styles*/
+  .flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .flex-column{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+
+  .flex-row{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  h2{
+    color:#2498f4;
+    margin: 0px;
+    padding: 15px;
+    font-weight: normal;
+  }
+
+  h1{
+    color:#ffffff;
+    margin:0px;
+  }
+
+  /*Header*/
   .header{
     grid-area: hd;
-    border-style: solid;
     background-color: #2191e9;
     justify-content: flex-start;
     color:#ffffff;
     font-weight: bold;
+    font-size: 12px;
+    padding-left: 10px;
   }
 
   .header img{
@@ -33,23 +70,27 @@
   }
 
   #social-stream{
-  flex-basis:75%;
+    flex-basis:75%;
   }
 
+  /*Navbar*/
   .navbar{
     grid-area: nav;
-    border-style: solid;
     background-color: #124570;
     justify-content: center;
+  }
+
+  .images-navbar img{
+    padding-top: 10px;
   }
 
   #stripes{
     background-image: repeating-linear-gradient(145deg, #134670, #194a74 2px, #174873 2px, #0e3f6f 4px);
   }
 
+  /*Dashboard*/
   .dashboard{
     grid-area:dash;
-    border-style: solid;
     background-color: #33cc66;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -63,50 +104,29 @@
 
   .dashboard .search-container {
     float: right;
-    margin-top: -40px;
+    margin-left: 45%;
   }
 
   .dashboard input[type="text"] {
     padding: 6px;
-    margin-bottom: 8px;
     font-size: 17px;
     border: none;
+    justify-content: flex-end;
   }
 
   .dashboard .search-container button {
     float: right;
-    padding: 16px 10px;
-    margin-top: 2px;
+    padding: 16px 20px;
     margin-right: 16px;
-    background: #ddd;
+    background: #ffffff;
+    background-image: url("../images/icon-search.png");
+    background-repeat: no-repeat;
     font-size: 17px;
     border: none;
     cursor: pointer;
   }
 
-  .dashboard .search-container button:hover {
-    background: #ccc;
-  }
-
-  .flex{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  }
-
-  .flex-column{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .flex-row{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-
+  /*Announcements*/
   .announcements{
     grid-area:an;
     border-style: solid;
@@ -120,8 +140,10 @@
 
   .announcements h5{
     color:#fe7f13;
+    font-weight: normal;
   }
 
+  /*Tasks*/
   .tasks{
     grid-area: task;
     border-style: solid;
@@ -131,11 +153,20 @@
     font-size: 20px;
   }
 
+  #settings{
+    margin-left: auto;
+    padding-right: 10%;
+  }
+
   #tasks{
     border-style: solid;
     border-color: #e9e9e9;
     border-width: thin;
     padding-left: 10px;
+  }
+
+  #tasks:hover{
+    color: gray;
   }
 
   #box{
@@ -145,31 +176,40 @@
     border-style: solid;
     border-color: #e9e9e9;
     border-width: thin;
+    height: 30px;
+    flex-basis: 15%;
+    font-size: 16px;
     margin-right: 5%;
+    padding: 5px;
   }
 
+  #box p{
+    padding-left: 10px;
+  }
 
-  .number-circle{
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  padding: 4px;
-  background: #32cc66;
-  color: #ffffff;
-  text-align: center;
-  font: 16px Arial, sans-serif;
-  margin-right: 10px;
-}
+    .number-circle{
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    background: #32cc66;
+    color: #ffffff;
+    text-align: center;
+    font: 16px Arial, sans-serif;
+    margin-right: 10px;
+  }
 
+  .number-circle:hover {
+    background-color: gray;
+  }
 
-
+  /*Analytics*/
   .analytics{
     grid-area:analyt;
     border-style: solid;
     border-color: #e9e9e9;
     border-width: thin;
   }
-
 
   .dropbtn {
     background-color: #ffffff;
@@ -182,18 +222,18 @@
 }
 
   .dropdown {
-      position: relative;
-      display: inline-block;
-      margin-left: 60%;
+    position: relative;
+    display: inline-block;
+    margin-left: 60%;
   }
 
   .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
   }
 
   .dropdown-content a {
@@ -221,6 +261,14 @@
     margin-bottom: 50px;
   }
 
+  .analytics h4{
+    padding-left: 15px;
+    color: #999999;
+    font-weight: normal;
+    font-size: 10px;
+  }
+
+  /*Checkmark Boxes*/
   .checkbox input[type="checkbox"] {
     opacity: 0;
   }
@@ -229,6 +277,8 @@
     position: relative;
     display: inline-block;
     padding-left: 22px;
+    font-size: 10px;
+    padding-bottom: 20px;
   }
 
   .checkbox label::before,
@@ -256,47 +306,48 @@
       transform: rotate(-45deg);
       left: 4px;
       top: 7px;
+      color: #ff9900;
   }
 
     /*Hide the checkmark by default*/
   .checkbox input[type="checkbox"] + label::after {
       content: none;
   }
+
   /*Unhide the checkmark on checked state*/
   .checkbox input[type="checkbox"]:checked + label::after {
       content: "";
-  }
-
-  /*Adding focus styles on the outer-box of the fake checkbox*/
-  .checkbox input[type="checkbox"]:focus + label::before {
-    outline: rgb(59, 153, 252) auto 5px;
   }
 
   .check1{
     color:#ffffff;
     background-color: #114570;
     padding: 5px;
+    border-radius: 5px;
   }
 
   .check2{
     color:#ffffff;
     background-color: #2298f4;
     padding: 5px;
+    border-radius: 5px;
   }
 
   .check3{
     color:#ffffff;
     background-color: #3a599b;
     padding: 5px;
+    border-radius: 5px;
   }
 
   .check4{
     color:#ffffff;
     background-color: #31cc66;
     padding: 5px;
+    border-radius: 5px;
   }
 
-
+  /*Recommendations*/
   .recommendations{
     grid-area:rec;
     border-style: solid;
@@ -316,24 +367,29 @@
     border-width: thin;
   }
 
-
-  #type{
-    font-size: 10px;
-    margin-bottom: 50px;
-    margin-right: 20px;
+  #rec:hover{
+    color: black;
   }
 
-  .recommendations .row{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
+  /*Contacts-Customers*/
   .contacts-customers {
     grid-area: con;
     border-style: solid;
     border-color: #e9e9e9;
     border-width: thin;
+  }
+
+  .rectangle-contacts{
+    height: 160px;
+    width: 190px;
+    border-style: solid;
+    border-color: gray;
+    border-width: thin;
+    position: relative;
+  }
+
+  .rectangle-contacts:hover{
+    color: #ffffff;
   }
 
   .cards{
@@ -349,29 +405,31 @@
     height: 40px;
   }
 
+  .banner:hover{
+    background-color: gray;
+    color: #ffffff;
+  }
+
   .banner h5{
     text-align: center;
     padding-top: 5px;
+    font-weight: normal;
+    color: #ffffff;
   }
 
   .banner h6{
     text-align: center;
     margin-top: -20px;
+    font-weight: normal;
+    color: #ffffff;
   }
 
-  .graph{
+  .graph img{
     margin-top: 20px;
-  }
-
-  .rectangle-contacts{
-    height: 160px;
-    width: 190px;
-    box-shadow: 1px -5px gray;
-    position: relative;
-  }
-
-  .rectangle-contacts:hover{
-    color: gray;
+    max-width: 180px;
+    max-height: 140px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .icon-man-green, .icon-man-orange{
@@ -380,6 +438,7 @@
     position: absolute;
   }
 
+  /*Did-You-Know*/
   .did-you-know{
     grid-area: did;
     border-style: solid;
@@ -389,17 +448,47 @@
 
   .content{
     background-color: #2498f4;
-    margin: 20px;
+    margin: 5%;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 20px;
   }
 
+  #content-did{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
+  #halfcircle1{
+    flex-basis: 10%;
+    margin-left: -5%;
+  }
+
+  #halfcircle2{
+    flex-basis: 10%;
+    margin-right: -2%;
+  }
+
+  #arrow-left{
+    flex-basis: 5%;
+    margin-left: -5%;
+  }
+
+  #arrow-right{
+    flex-basis: 5%;
+    margin-right: -5%;
+  }
+
+  /*Ads*/
   .ads{
     grid-area: ads;
     border-style: solid;
     border-color: #e9e9e9;
     border-width: thin;
     background-color: #2498f4;
-    justify-content: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .ads .rectangle1{
@@ -413,26 +502,33 @@
     position: relative;
   }
 
-
   .ads .rectangle1 h5{
     margin-left: 130px;
     margin-top: 40px;
     margin-right: 20px;
     text-align: right;
     font-size: 16px;
+    color: #59d37e;
+    font-weight: normal;
   }
 
   .ads .rectangle1 h6{
     margin-left: 130px;
     margin-top: -25px;
+    color: #666666;
+    font-weight: normal;
   }
-
 
   .rectangle2{
     background-color: #ffffff;
     position: relative;
     height: 130px;
     width: 250px;
+    z-index: 2;
+  }
+
+  .rectangle2 h5{
+    font-weight: normal;
   }
 
   .rectangle2 img{
@@ -443,8 +539,21 @@
     left: 5%;
   }
 
-  .rectangle2 p{
-    z-index: 55;
+  #ad2{
+    background-color: #33cc66;
+    z-index: 10;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 30px;
+    width: 220px;
+    text-align: center;
+  }
+
+  #ad2 h5{
+    padding: 7px;
+    font-size: 12px;
+    color: #ffffff;
   }
 
   .ads .rectangle3{
@@ -462,14 +571,19 @@
     margin-top: 40px;
     margin-left: 10px;
     font-size: 14px;
+    color: #fe7f13;
+    font-weight: normal;
   }
 
   .ads .rectangle3 h6{
     margin-top: -25px;
     margin-left: 10px;
     font-size: 14px;
+    color: #fe7f13;
+    font-weight: normal;
   }
 
+  /*Footer*/
   .footer{
     grid-area: ft;
     margin-top: 4%;
@@ -484,11 +598,14 @@
   }
 
   .tutorials{
+    flex-basis: 10%;
+    justify-content: space-between;
+    padding-left: 10px;
     margin-left: 10%;
   }
 
   .tutorials p{
-    padding: 7px;
+    padding-left: 20px;
   }
 
   .ariel-winter, .win, #logout{
@@ -496,22 +613,22 @@
     font-weight: bold;
   }
 
-  .social-icons{
-    padding: 10px;
-  }
-
-  #bar2{
+  .logout {
+    flex-basis: 20%;
+    justify-content: space-around;
     margin-right: 10%;
   }
 
-  h2{
-    color:#2498f4;
-    margin: 0px;
+  .social-icons{
+    margin-left: 5px;
   }
 
-  h1{
-    color:#ffffff;
-    margin:0px;
+  #bar{
+    padding-left: 20px;
+  }
+
+  #bar2{
+    margin-right: 30px;
   }
 
 }
@@ -536,6 +653,95 @@
     'ft';
   }
 
+    /*Header*/
+    #social-stream{
+      flex-basis:25%;
+    }
 
+      /*Navbar*/
+    .flex-column{
+      max-width: 35px;
+    }
+
+    /*Dashboard*/
+    .dashboard .flex{
+      flex-direction: column;
+    }
+
+    .dashboard .search-container {
+      margin-left: 20%;
+      padding-bottom: 5%;
+    }
+
+    /*Announcements*/
+    .announcements{
+      flex-direction: column;
+    }
+
+    .announcements p{
+      text-align: center;
+    }
+
+    /*Analytics*/
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 10%;
+    }
+
+    /*Contacts-Customers*/
+    .rectangle-contacts{
+      margin: 30px;
+    }
+
+    /*Did-You-Know*/
+    #content-did{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #halfcircle1{
+      flex-basis: 20%;
+      margin-left: -7%;
+    }
+
+    #halfcircle2{
+      flex-basis: 20%;
+      margin-right: -6%;
+    }
+
+    #arrow-left{
+      flex-basis: 12%;
+      margin-left: -6%;
+    }
+
+    #arrow-right{
+      flex-basis: 12%;
+      margin-right: -5%;
+      margin-left: 2px;
+    }
+
+    /*Ads*/
+    .ads .rectangle3{
+      height: 130px;
+      width: 250px;
+    }
+
+    /*Footer*/
+    .tutorials{
+      margin-left: 15%;
+    }
+
+    .ariel{
+      flex-basis: 90%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .logout{
+      flex-basis: 100%;
+      justify-content: space-between;
+      padding-left: 10px;
+    }
 
 }
