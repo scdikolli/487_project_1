@@ -146,6 +146,11 @@
     font-weight: normal;
   }
 
+  .announcements p{
+    font-size: 14px;
+    color: #777777;
+  }
+
   /*Tasks*/
   .tasks{
     grid-area: task;
